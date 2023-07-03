@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/artifice17_/static/css/main.08ca7eda.css",
+    "main.js": "/artifice17_/static/js/main.c9f08a47.js",
+    "index.html": "/artifice17_/index.html",
+    "main.08ca7eda.css.map": "/artifice17_/static/css/main.08ca7eda.css.map",
+    "main.c9f08a47.js.map": "/artifice17_/static/js/main.c9f08a47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08ca7eda.css",
+    "static/js/main.c9f08a47.js"
+  ]
+}
