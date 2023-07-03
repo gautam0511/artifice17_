@@ -14,7 +14,7 @@ const Contacts = () => {
   const [data, setData] = useState([])
   const [isSidebar, setIsSidebar] = useState(true);
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/product/').then((res) => {
+    axios.get('https://gautam0511.pythonanywhere.com/product/').then((res) => {
       console.log(res.data)
       setData(res.data.data)
     }).catch((err) => console.log(err))

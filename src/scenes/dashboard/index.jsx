@@ -34,7 +34,7 @@ const Dashboard = () => {
     
   };
   const share =  ()=>{
-    axios.get('http://127.0.0.1:8000/product/share/', { params: { search: childData} })
+    axios.get('https://gautam0511.pythonanywhere.com/product/share/', { params: { search: childData} })
       .then(response => {
         // Handle the response from the Django backend
         console.log(response.data);
@@ -56,12 +56,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     const revenue = async () => {
-      const data = await axios.get('http://127.0.0.1:8000/product/sales/')
+      const data = await axios.get('https://gautam0511.pythonanywhere.com/product/sales/')
       setSales(data.data.sum)
       setClients(data.data.count)
     }
     const sales = async () => {
-      const data = await axios.get('http://127.0.0.1:8000/product/sales/month/')
+      const data = await axios.get('https://gautam0511.pythonanywhere.com/product/sales/month/')
       setMsales(data.data.sum)
       const monthNumber = data.data.month
       const date = new Date(2000, monthNumber - 1);

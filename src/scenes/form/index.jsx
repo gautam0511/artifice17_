@@ -38,7 +38,7 @@ const Form = () => {
     // }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/product/add/', values);
+      const response = await axios.post('https://gautam0511.pythonanywhere.com/product/add/', values);
       console.log(response.data);
       // Reset form fields
       // setDataf({ id:'',name: '', product: '', state: '', });

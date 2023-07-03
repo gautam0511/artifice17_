@@ -23,7 +23,7 @@ const Calendar = () => {
 
   const fetchData = () => {
     axios
-      .get("http://127.0.0.1:8000/product/events/")
+      .get("https://gautam0511.pythonanywhere.com/product/events/")
       .then((res) => {
         const events = res.data.data.map((ev) => ({
           id: ev.id,
@@ -46,7 +46,7 @@ const Calendar = () => {
   
       if (newTitle) {
         axios
-          .put(`http://127.0.0.1:8000/product/events/update/${eventId}/`, { title: newTitle, date: selectedDate })
+          .put(`https://gautam0511.pythonanywhere.com/product/events/update/${eventId}/`, { title: newTitle, date: selectedDate })
           .then((res) => {
             const updatedEvent = {
               id: eventId,
@@ -71,7 +71,7 @@ const Calendar = () => {
         setCurrentEvents([...currentEvents, newEvent]);
         console.log(newEvent)
         axios
-          .post("http://127.0.0.1:8000/product/events/add/", newEvent)
+          .post("https://gautam0511.pythonanywhere.com/product/events/add/", newEvent)
           .then((res) => {
             const savedEvent = res.data.data;
             const updatedEvent = {
@@ -99,7 +99,7 @@ const Calendar = () => {
     ) {
       const eventId = selected.event.id;
       axios
-        .delete(`http://127.0.0.1:8000/product/events/delete/${eventId}/`)
+        .delete(`https://gautam0511.pythonanywhere.com/product/events/delete/${eventId}/`)
         .then((res) => {
           console.log(res,"!!!!!!")
           selected.event.remove();
